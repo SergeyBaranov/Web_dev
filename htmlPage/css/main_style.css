@@ -1,0 +1,245 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: #004C93;
+}
+
+.main {
+    margin-top: 100px;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* all about nav */
+nav {
+    background: #004C93;
+    overflow: hidden;
+    top: 0;
+    position: fixed; /* Set the navbar to fixed position */
+    width: 100%; /* Full width */
+}
+
+.main_menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+    align-items: baseline;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a.active {
+    text-decoration: underline;
+}
+
+.right_name {
+    color:#fff;
+    width: auto;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+ul.left_nav{
+    list-style: none;
+    display: flex;
+    width: auto;
+    gap: 16px;
+}
+
+.left_nav {
+    font-size: 16px;
+    font-weight: 400px;
+}
+
+/* all about nav end*/
+
+/* name starts */
+#about {
+    padding: 32px 0px;
+    display: flex;
+    justify-content: space-between;
+}   
+
+.name {
+    padding-top: 68px;
+}
+
+.name h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.my_info {
+    font-size: 24px;
+    font-style: italic;
+}
+
+.my_image {
+    height: 630px;
+    width: 565px;
+    background: grey;
+}
+
+/* name ends */
+
+/*about section starts*/
+.section{
+    background: #F3FBFF;
+    padding: 32px 0px;
+}
+
+.section_even {
+    background: #fff;
+    padding: 32px 0px;
+}
+
+/*about section ends*/
+
+/*activity starts*/
+.activity {
+    padding: 32px 0;
+}
+
+.section_content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.activity_method {
+    width: 200px;
+    height: 290px;
+    border: 1px solid #004C93;
+    padding: 8px 8px 16px 8px;
+    margin-top: 16px;
+}
+
+.activity_method:nth-child(even) {
+    margin-top: 64px;
+}
+
+@media screen and (max-width: 1200px) {
+    .activity_method:nth-child(even) {
+        margin-top: 32px;
+    }
+    .activity_method {
+        margin-top: 32px;
+    }
+}
+
+.section_title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.activity_number {
+    font-size: 120px;
+    font-weight: 700;
+    padding: 0;
+}
+
+.activity_info {
+    margin-top: -10px;
+}
+/*aactivity ends*/
+
+/*calc starts*/
+
+.lableInput {
+    display: flex;
+}
+
+.calc_inputs {
+    width: 60%;
+    display: flex;
+}
+
+.input_item {
+    width: 555px;
+    padding-bottom: 16px;
+}
+
+input {
+    width: 555px;
+    height: 32px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+select {
+    width: 555px;
+    height: 32px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.calc_results {
+    flex: auto;
+}
+
+button {
+    background: #004C93;
+    border-radius: 5px;
+    border: 0;
+    padding: 8px 16px;
+    color: #fff;
+}
+
+/*calc ends*/
+
+/*problems starts*/
+
+/*problems ends*/
+
+/*emoji starts*/
+.emoji_section {
+    display: flex;
+    justify-content: center;
+}
+
+.section_image {
+    width: 600px;
+    height: 567px;
+    background-image: url(../img/emoji.png);
+}
+/*emoji ends*/
+
+/*footer starts*/
+footer {
+    background: #004C93;
+    padding: 16px 0;
+}
+
+#footer_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+.social {
+    width: 32px;
+    height: 32px;
+    background-image: url(../img/vk_icon.svg);
+    color: #fff;
+}
+
+.right_nav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+}
+/*footer ends*/
