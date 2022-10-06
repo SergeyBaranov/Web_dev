@@ -36,7 +36,7 @@
         
         <div class="main">
             <!-- modal starts-->
-            <div class="modal_view">
+            <div class="modal_view hidden">
                 <div class="modal_content">
                     <div class="modal_header">
                         <h4>Результат операции</h4>
@@ -45,7 +45,7 @@
                         <p>Простое модальное окно</p>
                     </div>
                     <div class="modal_footer">
-                        <a class="custom_button">Закрыть</a>
+                        <button onclick="hide()" class="custom_button">Закрыть</button>
                     </div>
                 </div>
             </div>
@@ -125,7 +125,7 @@
                                         <input type="text" class="form_control" id="numberInput" placeholder="Выберите второе число">
                                     </div>
                                     <div>
-                                        <a class="custom_button" href="#openModal">Вычислить</a>
+                                        <button onclick="show()" class="custom_button" href="#openModal">Вычислить</button>
                                     </div>
                                 </div>
                             </div>
@@ -205,5 +205,16 @@
             </div>
         </footer>
     </body>
+    <script>
+        function show () {
+            let element_window = document.querySelector (".modal_view");
+            element_window.classList.remove("hidden");
+        }
+
+        function hide () {
+            let element_window = document.querySelector (".modal_view");
+            element_window.classList.add("hidden");
+        }
+    </script>
     
 </html>

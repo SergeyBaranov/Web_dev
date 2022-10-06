@@ -190,7 +190,7 @@ button {
 
 }
 
-a.custom_button {
+.custom_button {
     padding: 8px 16px;
     background: #004C93;
     border-radius: 5px;
@@ -291,6 +291,9 @@ footer a {
     justify-content: end;
   }
 
+.hidden {
+    display: none;
+}
 
   
 /* modal view ends*/
