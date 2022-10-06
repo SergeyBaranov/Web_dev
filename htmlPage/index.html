@@ -13,6 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
         <!--tailwind-->
         <script src="https://cdn.tailwindcss.com"></script>
+        <script src="js/window.js"></script>
     </head>
     <body>
         
@@ -111,11 +112,11 @@
                             <div class="calc_inputs">
                                 <div class="input_group">
                                     <div class="input_item">
-                                        <label for="numberInput" class="input_label">Введите первое число</label>
+                                        <label for="numberInput" class="input_label_first">Введите первое число</label>
                                         <input type="text" class="form_control" id="numberInput" placeholder="Выберите первое число">
                                     </div>
                                     <div class="input_item">
-                                        <label for="selectInput" class="input_label">Введите первое число</label>
+                                        <label for="selectInput" class="input_label">Введите второе число</label>
                                         <select name="operations" id="selectInput">
                                             <option value="selected">Выберите операцию</option>
                                         </select>
@@ -205,16 +206,5 @@
             </div>
         </footer>
     </body>
-    <script>
-        function show () {
-            let element_window = document.querySelector (".modal_view");
-            element_window.classList.remove("hidden");
-        }
-
-        function hide () {
-            let element_window = document.querySelector (".modal_view");
-            element_window.classList.add("hidden");
-        }
-    </script>
     
 </html>
