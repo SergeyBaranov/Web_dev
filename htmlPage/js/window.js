@@ -1,14 +1,17 @@
-function show () {
-    let element_input = document.querySelector(".input_label_first");
+function show() {
+    let element_input = document.querySelector(".form_control_first");
     let data = element_input.value;
 
-    console.dir(data);
+    let element_result = document.querySelector(".modal_main");
+    element_result.innerHTML = data;
 
-    let element_window = document.querySelector (".modal_view");
+    //console.dir(data);
+
+    let element_window = document.querySelector(".modal_view");
     element_window.classList.remove("hidden");
 }
 
-function hide () {
-    let element_window = document.querySelector (".modal_view");
+function hide() {
+    let element_window = document.querySelector(".modal_view");
     element_window.classList.add("hidden");
 }

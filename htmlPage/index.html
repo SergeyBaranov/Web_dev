@@ -6,14 +6,14 @@
         <!--Bootstrap css-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <!--own css-->
-        <link rel="stylesheet" href="css/main_style.css">
+        <link rel="stylesheet" href="./css/main_style.css">
         <!-- adding fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
         <!--tailwind-->
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script src="js/window.js"></script>
+        <!--<script src="https://cdn.tailwindcss.com"></script> -->
+        <script src="./js/window.js"></script>
     </head>
     <body>
         
@@ -46,7 +46,7 @@
                         <p>Простое модальное окно</p>
                     </div>
                     <div class="modal_footer">
-                        <button onclick="hide()" class="custom_button">Закрыть</button>
+                        <button onclick="hide()">Закрыть</button>
                     </div>
                 </div>
             </div>
@@ -112,28 +112,32 @@
                             <div class="calc_inputs">
                                 <div class="input_group">
                                     <div class="input_item">
-                                        <label for="numberInput" class="input_label_first">Введите первое число</label>
-                                        <input type="text" class="form_control" id="numberInput" placeholder="Выберите первое число">
+                                        <label for="numberInput" class="input_first">Введите первое число</label>
+                                        <input type="number" min="1" value="" class="form_control_first" id="numberInput" placeholder="Выберите первое число">
                                     </div>
                                     <div class="input_item">
-                                        <label for="selectInput" class="input_label">Введите второе число</label>
+                                        <label for="selectInput" class="input_label">Выберите операцию</label>
                                         <select name="operations" id="selectInput">
                                             <option value="selected">Выберите операцию</option>
+                                            <option value="plus">Сложение</option>
+                                            <option value="minus">Вычитание</option>
+                                            <option value="multiplication">Умножение</option>
+                                            <option value="division">Деление</option>
                                         </select>
                                     </div>
                                     <div class="input_item">
-                                        <label for="numberInput" class="input_label">Введите первое число</label>
-                                        <input type="text" class="form_control" id="numberInput" placeholder="Выберите второе число">
+                                        <label for="numberInput" class="input_second">Введите второе число</label>
+                                        <input type="number" min="1" value="" class="form_control" id="numberInput" placeholder="Выберите второе число">
                                     </div>
                                     <div>
-                                        <button onclick="show()" class="custom_button" href="#openModal">Вычислить</button>
+                                        <button onclick="show()">Вычислить</button>
                                     </div>
                                 </div>
                             </div>
                            
                             <div class="calc_results">
                                 <h6>Ваш результат:</h6>
-                                <div class="result">
+                                <div class="final_result">
                                     <p>Расчет не производился</p>
                                 </div>
                             </div>
