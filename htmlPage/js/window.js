@@ -24,19 +24,20 @@ function calculate() {
             result = number1 / number2;
             break;    
     }
-    document.getElementById("get_result").innerHTML = result;
+    document.getElementById("get_result").innerHTML = "Ваш результат = " + result;
 }
 
 
 // показываем модальное окно
 function show() {
+    
     let element_window = document.querySelector(".modal_view"); // показываем модальное окно
         element_window.classList.remove("hidden");
 
-    let element_result = document.querySelector(".modal_main");
-        element_result.innerHTML = data;
+    //let element_result = document.querySelector(".modal_main");
+    //    element_result.innerHTML = result;
 
-    document.getElementById("get_result").innerHTML = result;
+    //document.getElementById("get_result").innerHTML = result;
 }
 
 
@@ -44,6 +45,7 @@ function show() {
 function hide() {
     let element_window = document.querySelector(".modal_view");
     element_window.classList.add("hidden");
+    
 }
 
 
