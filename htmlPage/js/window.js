@@ -36,7 +36,7 @@ function show() {
     let element_result = document.querySelector(".modal_main");
         element_result.innerHTML = data;
 
-    //document.getElementById("get_result").innerHTML = result;
+    document.getElementById("get_result").innerHTML = result;
 }
 
 
