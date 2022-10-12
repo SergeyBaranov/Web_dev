@@ -1,9 +1,11 @@
+
+// работа с калькулятором
 function calculate() {
     let number1 = parseInt(document.getElementById("numberInput").value);
     let number2 = parseInt(document.getElementById("numberInput2").value);
     let result = 0;
     let sign = document.getElementById("selectInput").value;
-    console.log(number1, number2, sign);
+    //console.log(number1, number2, sign);
 
     switch(sign) {
         default:
@@ -25,6 +27,24 @@ function calculate() {
     document.getElementById("get_result").innerHTML = result;
 }
 
+
+// показываем модальное окно
+function show() {
+    let element_window = document.querySelector(".modal_view"); // показываем модальное окно
+        element_window.classList.remove("hidden");
+
+    let element_result = document.querySelector(".modal_main");
+        element_result.innerHTML = data;
+
+    //document.getElementById("get_result").innerHTML = result;
+}
+
+
+//закрываем модальное окно
+function hide() {
+    let element_window = document.querySelector(".modal_view");
+    element_window.classList.add("hidden");
+}
 
 
 /* function show() {

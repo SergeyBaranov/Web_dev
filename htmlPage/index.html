@@ -43,7 +43,7 @@
                         <h4>Результат операции</h4>
                     </div>
                     <div class="modal_main">
-                        <p>Простое модальное окно</p>
+                        <p id="get_result"></p>
                     </div>
                     <div class="modal_footer">
                         <button onclick="hide()">Закрыть</button>
@@ -113,7 +113,7 @@
                                 <div class="input_group">
                                     <div class="input_item">
                                         <label for="numberInput" class="input_label">Введите первое число</label>
-                                        <input type="number" min="1" value="0" class="form_control_first" id="numberInput" placeholder="Выберите первое число">
+                                        <input required type="number" min="1" value="" class="form_control_first" id="numberInput" placeholder="Выберите первое число">
                                     </div>
                                     <div class="input_item">
                                         <label for="selectInput" class="input_label">Выберите операцию</label>
@@ -127,10 +127,11 @@
                                     </div>
                                     <div class="input_item">
                                         <label for="numberInput2" class="input_label">Введите второе число</label>
-                                        <input type="number" min="1" value="0" class="form_control_second" id="numberInput2" placeholder="Выберите второе число">
+                                        <input required type="number" min="1" value="" class="form_control_second" id="numberInput2" placeholder="Выберите второе число">
                                     </div>
                                     <div>
-                                        <button onclick="calculate()">Вычислить</button>
+                                        <button onclick="calculate(); show()">Вычислить</button>
+                                        <!--<button onclick="calculate()">Вычислить</button>-->
                                     </div>
                                 </div>
                             </div>
