@@ -1,8 +1,8 @@
 
 // работа с калькулятором
 function calculate() {
-    let number1 = parseInt(document.getElementById("numberInput").value);
-    let number2 = parseInt(document.getElementById("numberInput2").value);
+    let number1 = Number(document.getElementById("numberInput").value);
+    let number2 = Number(document.getElementById("numberInput2").value);
     let result = 0;
     let sign = document.getElementById("selectInput").value;
     //console.log(number1, number2, sign);

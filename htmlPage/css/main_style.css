@@ -15,6 +15,7 @@ a:hover {
 }
 
 /* all about nav */
+
 nav {
     background: #004C93;
     overflow: hidden;
@@ -56,6 +57,51 @@ ul.left_nav{
 .left_nav {
     font-size: 16px;
     font-weight: 400px;
+}
+
+@media screen and (max-width: 991px){
+    .left_nav {
+        display: none !important;
+    }
+}
+
+
+.menu_burger {
+    display: none;
+}
+
+@media (max-width: 991px){
+    .menu_burger {
+        display: block  !important;
+        position: relative;
+        width: 30px;
+        height: 20px;
+    }
+    .menu_burger span {
+        position: absolute;
+        background: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 9px;
+    }
+    .menu_burger::before, 
+    .menu_burger::after {
+        content: "";
+        background: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        
+    }
+    .menu_burger::before {
+        top: 0;
+    }
+    .menu_burger::after {
+        bottom: 0;
+    }
 }
 
 /* all about nav end*/
