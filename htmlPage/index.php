@@ -1,4 +1,8 @@
+<?php
+    require_once("calculator.php");
+?>
 <!DOCTYPE html>
+
 <html>
     <head>
         <title>Sergey Baranov</title>
@@ -14,12 +18,11 @@
         <!--tailwind-->
         <!--<script src="https://cdn.tailwindcss.com"></script> -->
         <script src="js/window.js"></script>
-        <script src="js/adaptiveMenu.js"></script>
+        <!-- <script src="js/adaptiveMenu.js"></script> -->
         <!--Адаптивный viewport-->
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
-        
         <header>
             <nav>
                 <div class="container">
@@ -41,8 +44,10 @@
             </nav>
         </header>
         
+        
         <div class="main">
-            <!-- modal starts-->
+            
+                <!-- modal starts
             <div class="modal_view hidden">
                 <div class="modal_content">
                     <div class="modal_header">
@@ -56,7 +61,9 @@
                     </div>
                 </div>
             </div>
-            <!-- modal ends-->
+        
+            modal ends -->
+        
             <div class="container">
                 <div class="row">
                     <div id="about">
@@ -110,48 +117,93 @@
                     </div>
                 </div>
             </div>
+            <!--calculator starts-->
             <div class="section section_even">
                 <div class="container">
                     <div id="calculator">
                         <div class="section_title">Калькулятор</div>
-                        <div class="section_content">
-                            <div class="calc_inputs">
-                                <div class="input_group">
-                                    <div class="input_item">
-                                        <label for="numberInput" class="input_label">Введите первое число</label>
-                                        <input required type="number" min="1" value="" class="form_control_first" id="numberInput" placeholder="Выберите первое число">
+                            <div class="section_content">
+                                <!--form starts-->
+                                <form action="" method="post" class="simpleCalculator">
+                                    <div class="input_group">
+                                        <div class="input_item">
+                                            <label for="number1" class="input_label">Введите первое число</label>
+                                            <input required type="number" min="1" value="" name="number1" class="number1" id="number1" placeholder="Выберите первое число">
+                                        </div>
+                                        <div class="input_item">
+                                            <label for="selectInput" class="input_label">Выберите операцию</label>
+                                            <select class="operations" name="operation"> <!--список операнд-->
+                                                <option value="">Выберите операцию</option>
+                                                <option value="plus">Сложение</option>
+                                                <option value="minus">Вычитание</option>
+                                                <option value="multiplication">Умножение</option>
+                                                <option value="division">Деление</option>
+                                            </select>
+                                        </div>
+                                        <div class="input_item">
+                                            <label for="number2" class="input_label">Введите второе число</label>
+                                            <input required type="number" min="1" value="" name="number2" class="number2" id="number2" placeholder="Выберите второе число">
+                                        </div>
+                                        <div>
+                                            <button class="submit" type="submit" name="submit">Вычислить</button>
+                                        </div>
                                     </div>
-                                    <div class="input_item">
-                                        <label for="selectInput" class="input_label">Выберите операцию</label>
-                                        <select name="operations" id="selectInput">
-                                            <option value="">Выберите операцию</option>
-                                            <option value="plus">Сложение</option>
-                                            <option value="minus">Вычитание</option>
-                                            <option value="multiplication">Умножение</option>
-                                            <option value="division">Деление</option>
-                                        </select>
+                                    <div class="calc_results">
+                                        <h6>Ваш результат:</h6>
+                                        <div class="final_result">
+                                            <p class="error_field" name="error_field">
+                                                <?php
+                                                    if (!empty($error_result)) {
+                                                        echo $error_result;
+                                                    }
+                                                    
+                                                ?>
+                                            </p>
+                                            <p class="get_result" name="get_result">
+                                            <?php
+                                                    if (!empty($result)) {
+                                                        echo $result;
+                                                    }
+                                                    
+                                                ?>
+                                            </p> 
+                                        </div>
                                     </div>
-                                    <div class="input_item">
-                                        <label for="numberInput2" class="input_label">Введите второе число</label>
-                                        <input required type="number" min="1" value="" class="form_control_second" id="numberInput2" placeholder="Выберите второе число">
-                                    </div>
-                                    <div>
-                                        <button onclick="calculate(); show()">Вычислить</button>
-                                        <!--<button onclick="calculate()">Вычислить</button>-->
+                                </form>
+                                <!--form ends-->
+                                <!-- <div class="calc_inputs">
+                                    <div class="input_group">
+                                        <div class="input_item">
+                                            <label for="numberInput" class="input_label">Введите первое число</label>
+                                            <input required type="number" min="1" value="" class="form_control_first" id="numberInput" placeholder="Выберите первое число">
+                                        </div>
+                                        <div class="input_item">
+                                            <label for="selectInput" class="input_label">Выберите операцию</label>
+                                            <select name="operations" id="selectInput">
+                                                <option value="">Выберите операцию</option>
+                                                <option value="plus">Сложение</option>
+                                                <option value="minus">Вычитание</option>
+                                                <option value="multiplication">Умножение</option>
+                                                <option value="division">Деление</option>
+                                            </select>
+                                        </div>
+                                        <div class="input_item">
+                                            <label for="numberInput2" class="input_label">Введите второе число</label>
+                                            <input required type="number" min="1" value="" class="form_control_second" id="numberInput2" placeholder="Выберите второе число">
+                                        </div>
+                                        <div>
+                                            <button onclick="calculate(); show()">Вычислить</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                           
-                            <div class="calc_results">
-                                <h6>Ваш результат:</h6>
-                                <div class="final_result">
-                                    <p id="get_result"></p>
-                                </div>
+                                -->
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!--calculator ands-->
             <div class="section">
                 <div class="container">
                     <div id="troubles">
@@ -216,6 +268,7 @@
                 </div>
             </div>
         </footer>
+        
     </body>
     
 </html>
