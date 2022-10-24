@@ -23,7 +23,7 @@
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
-        <header>
+        <!-- <header>
             <nav>
                 <div class="container">
                     <div class="main_menu">
@@ -42,7 +42,7 @@
                     </div>
                 </div>
             </nav>
-        </header>
+        </header> -->
         
         
         <div class="main">
@@ -160,12 +160,26 @@
                                                 ?>
                                             </p>
                                             <p class="get_result" name="get_result">
+                                                
                                             <?php
-                                                    if (!empty($result)) {
-                                                        echo $result;
+                                                if (!empty($result)) {
+                                                    echo $result;
+                                                }
+                                                // $results = array_reverse($results ,true); 
+                                               
+                                                if(count($results) > 0) {
+                                                    foreach ($results as $result) { ?>
+                                                        <div>
+                                                            <span> Результат вычисления: </span> 
+                                                            <?php 
+                                                                echo $result["result"]
+                                                            ?>
+                                                        </div>
+                                            <?php 
                                                     }
-                                                    
-                                                ?>
+                                                } 
+                                            ?>
+                                            
                                             </p> 
                                         </div>
                                     </div>
