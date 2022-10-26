@@ -131,7 +131,8 @@ ul.left_nav{
 .my_image {
     height: 630px;
     width: 565px;
-    background: grey;
+    background: url("../img/my_image.png");
+    border-radius: 8px;
 }
 
 /* name ends */
@@ -156,8 +157,8 @@ ul.left_nav{
 
 .section_content {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 32px;
 }
 
 .activity_method {
@@ -247,7 +248,7 @@ select {
 }
 
 .calc_results {
-    flex: auto;
+    margin-left: 32px;
 }
 
 
