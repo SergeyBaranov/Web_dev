@@ -7,13 +7,14 @@
     
     // mysqli_query($connection, "INSERT INTO results (result) VALUES ('" . $_REQUEST["operation"] . "')");
     
-    
+    $result = null;
+
     if(isset($_POST["submit"])) {
         //инициализируем переменные
         $num1 = $_POST["number1"] ?? false;
         $num2 = $_POST["number2"] ?? false;
         $operation = $_POST["operation"] ?? false;
-        $result = null;
+        
 
 
         
@@ -59,5 +60,7 @@
         $results[] = $row;
      
     }
+
+    echo($result);
 
 ?>

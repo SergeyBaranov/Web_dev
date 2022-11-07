@@ -1,3 +1,7 @@
+<?php
+    require_once("calculator.php");
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -16,7 +20,7 @@
         <!--<script src="https://cdn.tailwindcss.com"></script> -->
         <!-- <script src="js/window.js"></script> -->
         <!-- <script src="js/adaptiveMenu.js"></script> -->
-        <script src="./js/outsender.js"></script> <!-- скрипт ajax запроса -->
+        <script src="./js/outsender.js"></script>  <!-- скрипт ajax запроса -->
         <!--Адаптивный viewport-->
         <meta name="viewport" content="width=device-width">
     </head>
@@ -119,10 +123,10 @@
                                     </div>
                                     <div class="input_item">
                                         <label for="number2" class="input_label">Введите второе число</label>
-                                        <input required type="number" min="1" value="" name="number2" class="number2" id="number2" placeholder="Выберите второе число">
+                                        <input required type="number"name="number2" class="number2" id="number2" placeholder="Выберите второе число">
                                     </div>
                                     <div>
-                                        <button onclick="getResult();">Вычислить</button>
+                                        <button onclick="getResults();">Вычислить</button>
                                     </div>
                                 </div>
                                 <div class="calc_results">
