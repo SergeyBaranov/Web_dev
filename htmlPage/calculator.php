@@ -1,5 +1,8 @@
 <?php
 
+    $output = [];
+    $error_result = 0;
+
     $connection = mysqli_connect("localhost", "root", "tsqSMagv", "calculate_result"); // устанавливаем связь с БД
     if (!$connection) {
         die ("Связь не установлена:" . mysqli_connect_error());
@@ -9,13 +12,11 @@
     
     $result = null;
 
-    if(isset($_POST["submit"])) {
+    if(isset($_POST["operation"])) {
         //инициализируем переменные
         $num1 = $_POST["number1"] ?? false;
         $num2 = $_POST["number2"] ?? false;
         $operation = $_POST["operation"] ?? false;
-        
-
 
         
         if(!$operation || !$num1 || !$num2) {
@@ -61,6 +62,14 @@
      
     }
 
-    echo($result);
+    // echo($result);
+    $output = [
+        'result' => $result,
+        'results' => $results,
+        'error' => $error_result
+    ];
+
+    header('Content-Type: application/json');
+    echo json_encode($output);
 
 ?>

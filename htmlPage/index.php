@@ -1,7 +1,3 @@
-<?php
-    require_once("calculator.php");
-?>
-
 <!DOCTYPE html>
 
 <html>
