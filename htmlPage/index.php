@@ -109,7 +109,7 @@
                                     </div>
                                     <div class="input_item">
                                         <label for="selectInput" class="input_label">Выберите операцию</label>
-                                        <select class="operations" name="operation"> <!--список операнд-->
+                                        <select class="operations" name="operation" id="operation"> <!--список операнд-->
                                             <option value="">Выберите операцию</option>
                                             <option value="plus">Сложение</option>
                                             <option value="minus">Вычитание</option>

@@ -10,10 +10,14 @@ function getResults() {
      let numberSecond = document.querySelector("#number2"); // получаем второй операнд
      let numberNext = numberSecond.value;
 
+     let operationType = document.querySelector("#operation");
+     let operation = operationType.value;
+
      let fdata = new FormData()
      fdata.append("number1", number)
      fdata.append("number2", numberNext)
-     fdata.append("operation", "minus")
+     fdata.append("operation", operation)
+     // fdata.append("operation", "minus")
 
      fetch("calculator.php", {
                method: "post",
